@@ -3,7 +3,7 @@ from composio import Composio
 from .models import Email
 from datetime import datetime
 
-AUTH_ID = "ca_Vvz9Dz77hOQA"
+AUTH_ID = "COMPOSIO_AUTH_ID"
 
 
 def get_composio_client():
