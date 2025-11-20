@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Email List</title>
+</head>
+<body>
+  <h1>Inbox</h1>
+  {% for email in emails %}
+    <div style="margin-bottom: 20px;">
+      <strong>{{ email.subject }}</strong><br>
+      From: {{ email.sender }}<br>
+      At: {{ email.received_at }}<br>
+      <em>{{ email.snippet|default:"No preview" }}</em>
+    </div>
+  {% empty %}
+    <p>No emails to display.</p>
+  {% endfor %}
+</body>
+</html>
